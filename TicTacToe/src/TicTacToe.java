@@ -42,36 +42,47 @@ public class TicTacToe {
 				}
 			}
 			// player 1 play
-			System.out.println("Player 1 it's your turn!");
 			char row;
-			do {
-				System.out.println("Please enter coordinates X, Y or Z!");
-				row = sc.next().charAt(0);
-			} while (row != 'x' && row != 'y' && row != 'Z');
 			int colum;
 			do {
-				System.out.println("Please enter coordinates 1,2 or 3!");
-				colum = sc.nextInt();
-			} while (colum != 1 && colum != 2 && colum != 3);
-			if (row == 'x' && colum == 1) {
-				x1 = 'X';
-			} else if (row == 'x' && colum == 2) {
-				x2 = 'X';
-			} else if (row == 'x' && colum == 3) {
-				x3 = 'X';
-			} else if (row == 'y' && colum == 1) {
-				y1 = 'X';
-			} else if (row == 'y' && colum == 2) {
-				y2 = 'X';
-			} else if (row == 'y' && colum == 3) {
-				y3 = 'X';
-			} else if (row == 'z' && colum == 1) {
-				z1 = 'X';
-			} else if (row == 'z' && colum == 2) {
-				z2 = 'X';
-			} else {
-				z3 = 'X';
-			}
+				System.out.println("Player 1 it's your turn!");
+				do {
+					System.out.println("Please enter coordinates X, Y or Z!");
+					row = sc.next().charAt(0);
+				} while (row != 'x' && row != 'y' && row != 'Z');
+				do {
+					System.out.println("Please enter coordinates 1,2 or 3!");
+					colum = sc.nextInt();
+				} while (colum != 1 && colum != 2 && colum != 3);
+				if (row == 'x' && colum == 1 && x1 == '*') {
+					x1 = 'X';
+					break;
+				} else if (row == 'x' && colum == 2 && x2 == '*') {
+					x2 = 'X';
+					break;
+				} else if (row == 'x' && colum == 3 && x3 == '*') {
+					x3 = 'X';
+					break;
+				} else if (row == 'y' && colum == 1 && y1 == '*') {
+					y1 = 'X';
+					break;
+				} else if (row == 'y' && colum == 2 && y2 == '*') {
+					y2 = 'X';
+					break;
+				} else if (row == 'y' && colum == 3 && y3 == '*') {
+					y3 = 'X';
+					break;
+				} else if (row == 'z' && colum == 1 && z1 == '*') {
+					z1 = 'X';
+					break;
+				} else if (row == 'z' && colum == 2 && z2 == '*') {
+					z2 = 'X';
+					break;
+				} else if (row == 'z' && colum == 3 && z3 == '*') {
+					z3 = 'X';
+					break;
+				}
+			} while (true);
 			// check for winner
 			if ((x1 == y1 && x1 == z1 && x1 != '*') || (x2 == y2 && x2 == z2 && x2 != '*')
 					|| (x3 == y3 && x3 == z3 && x3 != '*') || (x1 == x2 && x1 == x3 && x1 != '*')
@@ -81,34 +92,45 @@ public class TicTacToe {
 				break;
 			}
 			// player 2 play
-			System.out.println("Player 2 it's your turn!");
 			do {
-				System.out.println("Please enter coordinates X, Y or Z!");
-				row = sc.next().charAt(0);
-			} while (row != 'x' && row != 'y' && row != 'Z');
-			do {
-				System.out.println("Please enter coordinates 1,2 or 3!");
-				colum = sc.nextInt();
-			} while (colum != 1 && colum != 2 && colum != 3);
-			if (row == 'x' && colum == 1) {
-				x1 = 'O';
-			} else if (row == 'x' && colum == 2) {
-				x2 = 'O';
-			} else if (row == 'x' && colum == 3) {
-				x3 = 'O';
-			} else if (row == 'y' && colum == 1) {
-				y1 = 'O';
-			} else if (row == 'y' && colum == 2) {
-				y2 = 'O';
-			} else if (row == 'y' && colum == 3) {
-				y3 = 'O';
-			} else if (row == 'z' && colum == 1) {
-				z1 = 'O';
-			} else if (row == 'z' && colum == 2) {
-				z2 = 'O';
-			} else {
-				z3 = 'O';
-			}
+				System.out.println("Player 2 it's your turn!");
+				do {
+					System.out.println("Please enter coordinates X, Y or Z!");
+					row = sc.next().charAt(0);
+				} while (row != 'x' && row != 'y' && row != 'Z');
+				do {
+					System.out.println("Please enter coordinates 1,2 or 3!");
+					colum = sc.nextInt();
+				} while (colum != 1 && colum != 2 && colum != 3);
+				if (row == 'x' && colum == 1 && x1 == '*') {
+					x1 = 'O';
+					break;
+				} else if (row == 'x' && colum == 2 && x2 == '*') {
+					x2 = 'O';
+					break;
+				} else if (row == 'x' && colum == 3 && x3 == '*') {
+					x3 = 'O';
+					break;
+				} else if (row == 'y' && colum == 1 && y1 == '*') {
+					y1 = 'O';
+					break;
+				} else if (row == 'y' && colum == 2 && y2 == '*') {
+					y2 = 'O';
+					break;
+				} else if (row == 'y' && colum == 3 && y3 == '*') {
+					y3 = 'O';
+					break;
+				} else if (row == 'z' && colum == 1 && z1 == '*') {
+					z1 = 'O';
+					break;
+				} else if (row == 'z' && colum == 2 && z2 == '*') {
+					z2 = 'O';
+					break;
+				} else if (row == 'z' && colum == 3 && z3 == '*') {
+					z3 = 'O';
+					break;
+				}
+			} while (true);
 			// check for winner
 			if ((x1 == y1 && x1 == z1 && x1 != '*') || (x2 == y2 && x2 == z2 && x2 != '*')
 					|| (x3 == y3 && x3 == z3 && x3 != '*') || (x1 == x2 && x1 == x3 && x1 != '*')
