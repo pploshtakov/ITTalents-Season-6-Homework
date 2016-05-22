@@ -49,7 +49,7 @@ public class TicTacToe {
 				do {
 					System.out.println("Please enter coordinates X, Y or Z!");
 					row = sc.next().charAt(0);
-				} while (row != 'x' && row != 'y' && row != 'Z');
+				} while (row != 'x' && row != 'y' && row != 'z');
 				do {
 					System.out.println("Please enter coordinates 1,2 or 3!");
 					colum = sc.nextInt();
@@ -97,7 +97,7 @@ public class TicTacToe {
 				do {
 					System.out.println("Please enter coordinates X, Y or Z!");
 					row = sc.next().charAt(0);
-				} while (row != 'x' && row != 'y' && row != 'Z');
+				} while (row != 'x' && row != 'y' && row != 'z');
 				do {
 					System.out.println("Please enter coordinates 1,2 or 3!");
 					colum = sc.nextInt();
