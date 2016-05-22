@@ -118,6 +118,7 @@ public class TicTacToe {
 				break;
 			}
 		} while (true);
+		//print desk and winner
 		System.out.println("  1" + "  2" + "  3");
 		System.out.println(" " + x1 + " |" + x2 + " |" + x3);
 		System.out.println("X__|__|__");
