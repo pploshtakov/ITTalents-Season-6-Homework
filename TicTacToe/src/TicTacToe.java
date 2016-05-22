@@ -91,6 +91,13 @@ public class TicTacToe {
 				player1Won = true;
 				break;
 			}
+			System.out.println("  1" + "  2" + "  3");
+			System.out.println(" " + x1 + " |" + x2 + " |" + x3);
+			System.out.println("X__|__|__");
+			System.out.println(" " + y1 + " |" + y2 + " |" + y3);
+			System.out.println("Y__|__|__");
+			System.out.println(" " + z1 + " |" + z2 + " |" + z3);
+			System.out.println("Z  |  |  ");
 			// player 2 play
 			do {
 				System.out.println("Player 2 it's your turn!");
