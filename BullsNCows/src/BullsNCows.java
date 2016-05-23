@@ -81,15 +81,25 @@ public class BullsNCows {
 				}
 				System.out.println("Please enter value for position 'b'!");
 				int b1 = sc.nextInt();
-				while (b1 < 0 || b1 > 9) {
-					System.out.println("'b' must be digit between 0 to 9!Please enter again!");
-					b1 = sc.nextInt();
+				while (b1 < 0 || b1 > 9 || b1 == a1) {
+					if (b1 == a1) {
+						System.out.println("Digits must be different! Please enter again!");
+						b1 = sc.nextInt();
+					} else {
+						System.out.println("'b' must be digit between 0 to 9!Please enter again!");
+						b1 = sc.nextInt();
+					}
 				}
 				System.out.println("Please enter value for position 'c'!");
 				int c1 = sc.nextInt();
-				while (c1 < 0 || c1 > 9) {
-					System.out.println("'c' must be digit between 0 to 9!Please enter again!");
-					c1 = sc.nextInt();
+				while (c1 < 0 || c1 > 9 || c1 == a1 || c1 == b1) {
+					if (c1 == a1 || c1 == b1) {
+						System.out.println("Digits must be different! Please enter again!");
+						c1 = sc.nextInt();
+					} else {
+						System.out.println("'c' must be digit between 0 to 9!Please enter again!");
+						c1 = sc.nextInt();
+					}
 				}
 				// chech for bulls and cows
 				int bulls = 0;
@@ -154,21 +164,36 @@ public class BullsNCows {
 				}
 				System.out.println("Please enter value for position 'b'!");
 				int b1 = sc.nextInt();
-				while (b1 < 0 || b1 > 9) {
-					System.out.println("'b' must be digit between 0 to 9!Please enter again!");
-					b1 = sc.nextInt();
+				while (b1 < 0 || b1 > 9 || b1 == a1) {
+					if (b1 == a1) {
+						System.out.println("Digits must be different! Please enter again!");
+						b1 = sc.nextInt();
+					} else {
+						System.out.println("'b' must be digit between 0 to 9!Please enter again!");
+						b1 = sc.nextInt();
+					}
 				}
 				System.out.println("Please enter value for position 'c'!");
 				int c1 = sc.nextInt();
-				while (c1 < 0 || c1 > 9) {
-					System.out.println("'c' must be digit between 0 to 9!Please enter again!");
-					c1 = sc.nextInt();
+				while (c1 < 0 || c1 > 9 || c1 == a1 || c1 == b1) {
+					if (c1 == a1 || c1 == b1) {
+						System.out.println("Digits must be different! Please enter again!");
+						c1 = sc.nextInt();
+					} else {
+						System.out.println("'c' must be digit between 0 to 9!Please enter again!");
+						c1 = sc.nextInt();
+					}
 				}
 				System.out.println("Please enter value for position 'd'!");
 				int d1 = sc.nextInt();
-				while (d1 < 0 || d1 > 9) {
-					System.out.println("'d' must be digit between 0 to 9!Please enter again!");
-					d1 = sc.nextInt();
+				while (d1 < 0 || d1 > 9 || d1 == a1 || d1 == b1 || d1 == c1) {
+					if (d1 == a1 || d1 == b1 || d1 == c1) {
+						System.out.println("Digits must be different! Please enter again!");
+						d1 = sc.nextInt();
+					} else {
+						System.out.println("'d' must be digit between 0 to 9!Please enter again!");
+						d1 = sc.nextInt();
+					}
 				}
 				// chech for bulls and cows
 				int bulls = 0;
@@ -239,27 +264,47 @@ public class BullsNCows {
 				}
 				System.out.println("Please enter value for position 'b'!");
 				int b1 = sc.nextInt();
-				while (b1 < 0 || b1 > 9) {
-					System.out.println("'b' must be digit between 0 to 9!Please enter again!");
-					b1 = sc.nextInt();
+				while (b1 < 0 || b1 > 9 || b1 == a1) {
+					if (b1 == a1) {
+						System.out.println("Digits must be different! Please enter again!");
+						b1 = sc.nextInt();
+					} else {
+						System.out.println("'b' must be digit between 0 to 9!Please enter again!");
+						b1 = sc.nextInt();
+					}
 				}
 				System.out.println("Please enter value for position 'c'!");
 				int c1 = sc.nextInt();
-				while (c1 < 0 || c1 > 9) {
-					System.out.println("'c' must be digit between 0 to 9!Please enter again!");
-					c1 = sc.nextInt();
+				while (c1 < 0 || c1 > 9 || c1 == a1 || c1 == b1) {
+					if (c1 == a1 || c1 == b1) {
+						System.out.println("Digits must be different! Please enter again!");
+						c1 = sc.nextInt();
+					} else {
+						System.out.println("'c' must be digit between 0 to 9!Please enter again!");
+						c1 = sc.nextInt();
+					}
 				}
 				System.out.println("Please enter value for position 'd'!");
 				int d1 = sc.nextInt();
-				while (d1 < 0 || d1 > 9) {
-					System.out.println("'d' must be digit between 0 to 9!Please enter again!");
-					d1 = sc.nextInt();
+				while (d1 < 0 || d1 > 9 || d1 == a1 || d1 == b1 || d1 == c1) {
+					if (d1 == a1 || d1 == b1 || d1 == c1) {
+						System.out.println("Digits must be different! Please enter again!");
+						d1 = sc.nextInt();
+					} else {
+						System.out.println("'d' must be digit between 0 to 9!Please enter again!");
+						d1 = sc.nextInt();
+					}
 				}
 				System.out.println("Please enter value for position 'e'!");
 				int e1 = sc.nextInt();
-				while (e1 < 0 || e1 > 9) {
-					System.out.println("'e' must be digit between 0 to 9!Please enter again!");
-					e1 = sc.nextInt();
+				while (e1 < 0 || e1 > 9 || e1 == a1 || e1 == b1 || e1 == c1 || e1 == d1) {
+					if (e1 == a1 || e1 == b1 || e1 == c1 || e1 == d1) {
+						System.out.println("Digits must be different! Please enter again!");
+						e1 = sc.nextInt();
+					} else {
+						System.out.println("'e' must be digit between 0 to 9!Please enter again!");
+						e1 = sc.nextInt();
+					}
 				}
 				// chech for bulls and cows
 				int bulls = 0;
@@ -337,33 +382,58 @@ public class BullsNCows {
 				}
 				System.out.println("Please enter value for position 'b'!");
 				int b1 = sc.nextInt();
-				while (b1 < 0 || b1 > 9) {
-					System.out.println("'b' must be digit between 0 to 9!Please enter again!");
-					b1 = sc.nextInt();
+				while (b1 < 0 || b1 > 9 || b1 == a1) {
+					if (b1 == a1) {
+						System.out.println("Digits must be different! Please enter again!");
+						b1 = sc.nextInt();
+					} else {
+						System.out.println("'b' must be digit between 0 to 9!Please enter again!");
+						b1 = sc.nextInt();
+					}
 				}
 				System.out.println("Please enter value for position 'c'!");
 				int c1 = sc.nextInt();
-				while (c1 < 0 || c1 > 9) {
-					System.out.println("'c' must be digit between 0 to 9!Please enter again!");
-					c1 = sc.nextInt();
+				while (c1 < 0 || c1 > 9 || c1 == a1 || c1 == b1) {
+					if (c1 == a1 || c1 == b1) {
+						System.out.println("Digits must be different! Please enter again!");
+						c1 = sc.nextInt();
+					} else {
+						System.out.println("'c' must be digit between 0 to 9!Please enter again!");
+						c1 = sc.nextInt();
+					}
 				}
 				System.out.println("Please enter value for position 'd'!");
 				int d1 = sc.nextInt();
-				while (d1 < 0 || d1 > 9) {
-					System.out.println("'d' must be digit between 0 to 9!Please enter again!");
-					d1 = sc.nextInt();
+				while (d1 < 0 || d1 > 9 || d1 == a1 || d1 == b1 || d1 == c1) {
+					if (d1 == a1 || d1 == b1 || d1 == c1) {
+						System.out.println("Digits must be different! Please enter again!");
+						d1 = sc.nextInt();
+					} else {
+						System.out.println("'d' must be digit between 0 to 9!Please enter again!");
+						d1 = sc.nextInt();
+					}
 				}
 				System.out.println("Please enter value for position 'e'!");
 				int e1 = sc.nextInt();
-				while (e1 < 0 || e1 > 9) {
-					System.out.println("'e' must be digit between 0 to 9!Please enter again!");
-					e1 = sc.nextInt();
+				while (e1 < 0 || e1 > 9 || e1 == a1 || e1 == b1 || e1 == c1 || e1 == d1) {
+					if (e1 == a1 || e1 == b1 || e1 == c1 || e1 == d1) {
+						System.out.println("Digits must be different! Please enter again!");
+						e1 = sc.nextInt();
+					} else {
+						System.out.println("'e' must be digit between 0 to 9!Please enter again!");
+						e1 = sc.nextInt();
+					}
 				}
 				System.out.println("Please enter value for position 'f'!");
 				int f1 = sc.nextInt();
-				while (f1 < 0 || f1 > 9) {
-					System.out.println("'f' must be digit between 0 to 9!Please enter again!");
-					f1 = sc.nextInt();
+				while (f1 < 0 || f1 > 9 || f1 == a1 || f1 == b1 || f1 == c1 || f1 == d1 || f1 == e1) {
+					if (f1 == a1 || f1 == b1 || f1 == c1 || f1 == d1 || f1 == e1) {
+						System.out.println("Digits must be different! Please enter again!");
+						f1 = sc.nextInt();
+					} else {
+						System.out.println("'f' must be digit between 0 to 9!Please enter again!");
+						f1 = sc.nextInt();
+					}
 				}
 				// chech for bulls and cows
 				int bulls = 0;
