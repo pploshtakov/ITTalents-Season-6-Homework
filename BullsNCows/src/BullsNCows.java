@@ -6,7 +6,7 @@ public class BullsNCows {
 		// import Scanner
 		Scanner sc = new Scanner(System.in);
 		// how to play
-		System.out.println("How to play.");
+		System.out.println("How  to play.");
 		System.out.println("Всички цифри от намисленото число са различни.");
 		System.out.println("Числото не може да започва с нула.");
 		System.out.println("Ако във Вашето число има съвпадения на правилните места, те са бикове.");
