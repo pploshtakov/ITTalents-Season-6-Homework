@@ -1,15 +1,13 @@
 package notepadClasses;
 
+import myExceptions.WeakPasswordExceptions;
+
 public class SecuredNotepad extends Secured {
 
-	public SecuredNotepad(String title, int numberOfPages, String pass) {
+	public SecuredNotepad(String title, int numberOfPages, String pass) throws WeakPasswordExceptions {
 		super(title, numberOfPages, pass);
 	}
 
-	@Override
-	public boolean checkPass(String pass) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	
 
 }
