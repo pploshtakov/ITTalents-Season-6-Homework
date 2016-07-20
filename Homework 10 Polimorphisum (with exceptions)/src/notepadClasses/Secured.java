@@ -72,5 +72,50 @@ public abstract class Secured extends Notepad implements ISecuredNotepad {
 		}
 	}
 
+	@Override
+	public String getTitle() {
+		System.out.println("To get title you need a password!");
+		String pass = requestPass();
+		if (checkPass(pass)) {
+			return super.getTitle();
+		} else {
+			return "Wrong password";
+		}
+	}
+
+	@Override
+	public void searchWord(String word) {
+		System.out.println("To print pages you need a password!");
+		String pass = requestPass();
+		if (checkPass(pass)) {
+			super.searchWord(word);
+		} else {
+			System.out.println("Wrong password!");
+		}
+	}
+
+	@Override
+	public void printAllPagesWithDigits() {
+		System.out.println("To print pages you need a password!");
+		String pass = requestPass();
+		if (checkPass(pass)) {
+			super.printAllPagesWithDigits();
+		} else {
+			System.out.println("Wrong password!");
+		}
+	}
+
+	@Override
+	protected boolean isHaveSuchPage(int page) {
+		System.out.println("To print pages you need a password!");
+		String pass = requestPass();
+		if (checkPass(pass)) {
+			return super.isHaveSuchPage(page);
+		} else {
+			System.out.println("Wrong password!");
+			return false;
+		}
+	}
+
 	
 }

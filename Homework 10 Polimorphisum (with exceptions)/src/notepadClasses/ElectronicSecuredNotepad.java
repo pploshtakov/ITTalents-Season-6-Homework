@@ -75,4 +75,32 @@ public class ElectronicSecuredNotepad extends Secured implements IElectronicDevi
 		return isStarted;
 	}
 
+	@Override
+	public String getTitle() {
+		if (isStarted()) {
+			return super.getTitle();
+		} else {
+			printMessageToStart();
+			return "Device is disconnected!";
+		}
+	}
+
+	@Override
+	public void searchWord(String word) {
+		if (isStarted()) {
+			super.searchWord(word);
+		} else {
+			printMessageToStart();
+		}
+	}
+
+	@Override
+	public void printAllPagesWithDigits() {
+		if (isStarted()) {
+			super.printAllPagesWithDigits();
+		} else {
+			printMessageToStart();
+		}
+	}
+	
 }

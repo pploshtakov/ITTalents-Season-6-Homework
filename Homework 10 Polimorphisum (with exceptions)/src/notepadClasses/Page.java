@@ -9,7 +9,23 @@ public class Page {
 	public Page(String title) {
 		this.title = title;
 	}
-
+	
+	public boolean searchWord(String word) {
+		return this.text.contains(word);
+	}
+	
+	public boolean containsDigits() {
+		char[] ch = this.text.toCharArray();
+		for (int i = 0; i < ch.length; i++) {
+			if (Character.isDigit(ch[i])) {
+				System.out.println("In the text there is digits!");
+				return true;
+			}
+		}
+		System.out.println("In the text there isn't digits!");
+		return false;
+	}
+	
 	public void addText (String text) {
 		if (this.text == null) {
 			this.text = text;

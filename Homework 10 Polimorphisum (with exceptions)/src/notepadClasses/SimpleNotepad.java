@@ -6,4 +6,6 @@ public class SimpleNotepad extends Notepad {
 		super(title, numberOfPages);
 	}
 
+	
+
 }

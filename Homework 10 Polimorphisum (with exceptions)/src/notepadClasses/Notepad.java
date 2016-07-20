@@ -13,21 +13,34 @@ public abstract class Notepad implements INotepad{
 			pages[i] = new Page(Integer.toString(i + 1));
 		}
 	}
-
+	
+	
 	@Override
 	public void addTextToPage(String text, int numberOfPage) {
-		this.pages[numberOfPage - 1].addText(text);
+		if (isHaveSuchPage(numberOfPage)) {
+			this.pages[numberOfPage - 1].addText(text);
+		} else {
+			printNoSuchPage();
+		}
 	}
 
 	@Override
 	public void replaceTextToPage(String text, int numberOfPage) {
-		this.pages[numberOfPage - 1].delText();
-		this.pages[numberOfPage - 1].addText(text);
+		if (isHaveSuchPage(numberOfPage)) {
+			this.pages[numberOfPage - 1].delText();
+			this.pages[numberOfPage - 1].addText(text);
+		} else {
+			printNoSuchPage();
+		}
 	}
 
 	@Override
 	public void delTextToPage(int numberOfPage) {
-		this.pages[numberOfPage - 1].delText();
+		if (isHaveSuchPage(numberOfPage)) {
+			this.pages[numberOfPage - 1].delText();
+		} else {
+			printNoSuchPage();
+		}
 	}
 
 	@Override
@@ -57,5 +70,53 @@ public abstract class Notepad implements INotepad{
 			System.out.println("You don't typed a title, default title is \"Default Notepad\"");
 			this.title = "Default Notepad";
 		}
+	}
+
+	public String getTitle() {
+		return title;
+	}
+	
+	
+	
+	@Override
+	public void searchWord(String word) {
+		boolean hasWord = false;
+		for (int i = 0; i < pages.length; i++) {
+			if (pages[i].searchWord(word)) {
+				System.out.println("There is \"" + word + "\" on page " + (i + 1));
+				hasWord = true;
+			}
+		}
+		if (hasWord) {
+			return;
+		} else {
+			System.out.println("There isn't \"" + word + "\" on any page!");
+		}
+	}
+
+
+	@Override
+	public void printAllPagesWithDigits() {
+		boolean hasPagesWithDigits = false;
+		for (int i = 0; i < pages.length; i++) {
+			if (pages[i].containsDigits()) {
+				System.out.println(pages[i].viewPage());
+				hasPagesWithDigits = true;
+			}
+		}
+		if (hasPagesWithDigits) {
+			return;
+		} else {
+			System.out.println("There aren't pages with digits!");
+		}
+	}
+
+
+	protected boolean isHaveSuchPage (int page) {
+		return (page >= 0 && page < this.pages.length);
+	}
+	
+	private void printNoSuchPage() {
+		System.out.println("No such page!");
 	}
 }
