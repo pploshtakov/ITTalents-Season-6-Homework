@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import persons.Doctor;
+import persons.Patient;
 
 public class Hospital {
 	private String name;
@@ -18,7 +19,7 @@ public class Hospital {
 		this.departments.add(new Cardiology());
 		this.departments.add(new Virology());
 	}
-	
+	//chech for free bads
 	public boolean isHaveFreeBadsInHospital() {
 		boolean isHaveBads = false;
 		for(Iterator<Department> it = departments.iterator(); it.hasNext();) {
@@ -29,17 +30,25 @@ public class Hospital {
 		}
 		return isHaveBads;
 	}
-	
+	// count patients by one doctor
 	public void howManyPatients(Doctor doc) {
 		System.out.println("Doctor " + doc.getName() + " have " + doc.getPatients().size() + " patients.");
 	}
-	
+	// count all patients
 	public void printInfoForAllDoctorsPatients() {
 		for(Department dep : departments) {
 			ArrayList<Doctor> docs = dep.getDoctors();
 			for (Doctor doc : docs) {
 				this.howManyPatients(doc);
 			}
+		}
+	}
+	// accepts new patient
+	public void acceptNewPatient(Patient patient) {
+		if (this.isHaveFreeBadsInHospital()) {
+			//TODO diagnose
+		} else {
+			System.out.println("Do not have free bads!");
 		}
 	}
 }
