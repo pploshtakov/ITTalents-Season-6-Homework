@@ -1,0 +1,3 @@
+ This is awesome!
+ This is awesome!
+The word's appears 2 times!
