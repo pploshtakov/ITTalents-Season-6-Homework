@@ -76,7 +76,7 @@ public class InputOutputExample {
 		case delete:
 			// TODO
 			File delFile = new File("E:\\ITTalents\\Season 6 Homework\\InputOutputExample\\src\\inputOutputExtmple\\output.txt");
-			delFile.deleteOnExit();
+			delFile.delete();
 			break;
 		case search:
 			File file = new File("E:\\ITTalents\\Season 6 Homework\\InputOutputExample\\src\\inputOutputExtmple\\output.txt");
